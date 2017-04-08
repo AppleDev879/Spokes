@@ -15,9 +15,10 @@ class BikesMasterViewController: UIViewController, MKMapViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         SideMenuManager.menuPresentMode = .menuSlideIn
+        /*
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BikesMasterViewController.panGestureRecognized(withRecognizer:)))
         self.tableView.addGestureRecognizer(panRecognizer)
-        
+        */
         let kansas = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.0558, 95.6890), MKCoordinateSpanMake(13, 30))
         self.mapView.setRegion(kansas, animated: false)
         
