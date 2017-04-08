@@ -9,6 +9,7 @@ target 'Spokes' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'SideMenu'
 
   target 'SpokesTests' do
     inherit! :search_paths

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		497888971E310320000BE59B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497888961E310320000BE59B /* LoginViewController.swift */; };
 		49B531441E2EDDEB0015286D /* BikesMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B531431E2EDDEB0015286D /* BikesMasterViewController.swift */; };
 		49D8A0171E299E4B007E059D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8A0161E299E4B007E059D /* AppDelegate.swift */; };
 		49D8A01C1E299E4B007E059D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D8A01A1E299E4B007E059D /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		12032D0D7466BBF9DF74832E /* Pods_SpokesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpokesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		497888961E310320000BE59B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		49B531431E2EDDEB0015286D /* BikesMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikesMasterViewController.swift; sourceTree = "<group>"; };
 		49D8A0131E299E4B007E059D /* Spokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D8A0161E299E4B007E059D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		49D8A0351E299E4B007E059D /* SpokesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpokesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D8A0391E299E4B007E059D /* SpokesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokesUITests.swift; sourceTree = "<group>"; };
 		49D8A03B1E299E4B007E059D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49D8A0471E299E91007E059D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		49D8A0471E299E91007E059D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		49D8A04A1E299F07007E059D /* BikesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikesTableViewCell.swift; sourceTree = "<group>"; };
 		49D8A04E1E299F44007E059D /* Bike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		49D8A0501E299F8B007E059D /* Spokes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spokes.entitlements; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				49B531431E2EDDEB0015286D /* BikesMasterViewController.swift */,
 				49D8A04A1E299F07007E059D /* BikesTableViewCell.swift */,
 				49D8A04E1E299F44007E059D /* Bike.swift */,
+				497888961E310320000BE59B /* LoginViewController.swift */,
 				49D8A01A1E299E4B007E059D /* Main.storyboard */,
 				49D8A0201E299E4B007E059D /* Assets.xcassets */,
 				49D8A0221E299E4B007E059D /* LaunchScreen.storyboard */,
@@ -257,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Andrew Barrett";
 				TargetAttributes = {
 					49D8A0121E299E4B007E059D = {
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497888971E310320000BE59B /* LoginViewController.swift in Sources */,
 				49D8A0521E299FC3007E059D /* UserViewController.swift in Sources */,
 				49B531441E2EDDEB0015286D /* BikesMasterViewController.swift in Sources */,
 				49D8A04B1E299F07007E059D /* BikesTableViewCell.swift in Sources */,
@@ -633,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAAA3FD2B184AA1EDCF7FAC9 /* Pods-Spokes.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Spokes/Spokes.entitlements;
 				DEVELOPMENT_TEAM = 5EF624JR9V;
@@ -648,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57BC31E5292F252B034ED913 /* Pods-Spokes.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Spokes/Spokes.entitlements;
 				DEVELOPMENT_TEAM = 5EF624JR9V;

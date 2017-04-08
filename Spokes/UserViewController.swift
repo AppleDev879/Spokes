@@ -46,16 +46,12 @@ class UserViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBAction func createButtonPressed(_ sender: Any) {
         var pass = false
         var username = ""
-        var message = "Please enter a valid email and password."
+        let message = "Please enter a valid email and password."
         
         if let text = emailField.text {
             if text.contains("@") {
-                if text.substring(from: (text.range(of: "@")?.lowerBound)!) == "@oberlin.edu" {
-                    pass = true
-                    username = text.substring(to: (text.range(of: "@")?.lowerBound)!)
-                } else {
-                    message = "You must use an Oberlin.edu email to register."
-                }
+                pass = true
+                username = text.substring(to: (text.range(of: "@")?.lowerBound)!)
             }
         }
         if (pass == false) {

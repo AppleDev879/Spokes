@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 import FirebaseDatabase
+import SideMenu
 
 class BikesMasterViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -13,6 +14,9 @@ class BikesMasterViewController: UIViewController, MKMapViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SideMenuManager.menuPresentMode = .menuSlideIn
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BikesMasterViewController.panGestureRecognized(withRecognizer:)))
+        self.tableView.addGestureRecognizer(panRecognizer)
         
         let kansas = MKCoordinateRegionMake(CLLocationCoordinate2DMake(39.0558, 95.6890), MKCoordinateSpanMake(13, 30))
         self.mapView.setRegion(kansas, animated: false)
@@ -93,7 +97,6 @@ class BikesMasterViewController: UIViewController, MKMapViewDelegate, UITableVie
         return 89.0
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! BikesTableViewCell
         
@@ -108,6 +111,28 @@ class BikesMasterViewController: UIViewController, MKMapViewDelegate, UITableVie
         cell.costLabel.text = "$" + costString
         
         return cell
+    }
+    
+    var beginPoint:CGPoint!
+    
+    func panGestureRecognized(withRecognizer recognizer: UIPanGestureRecognizer) {
+        let point = recognizer.location(in: self.view)
+        if recognizer.state == .began {
+            guard self.tableView.frame.contains(point) else {
+                return
+            }
+            self.beginPoint = point
+        } else if recognizer.state == .changed {
+            /* if (self.tableView.tableHeaderView?.frame.contains(point))! {
+             if beginPoint != nil {
+             self.tableView.frame.origin.y = recognizer.location(in: self.view).
+             }
+             
+             }
+             */
+        } else if recognizer.state == .ended {
+            self.beginPoint = nil
+        }
     }
     
 }
